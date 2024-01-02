@@ -1,6 +1,6 @@
 Class {
 	#name : #BaselineOfGt4Nix,
-	#superclass : #Object,
+	#superclass : #BaselineOf,
 	#category : #BaselineOfGt4Nix
 }
 
