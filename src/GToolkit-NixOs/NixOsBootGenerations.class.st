@@ -30,7 +30,7 @@ NixOsBootGenerations >> getEntries [
 
 	newEntries := (entriesDirectory childrenMatching: '*.conf') collect: [ :child |
 		NixOsBootEntry file: child ].
-	^ newEntries sorted: #version descending.
+	^ newEntries sorted: #generation descending.
 ]
 
 { #category : #ui }

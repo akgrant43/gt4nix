@@ -37,6 +37,17 @@ NixOsBootEntry >> file: anObject [
 ]
 
 { #category : #accessing }
+NixOsBootEntry >> generation [
+	"Answer the Generation number embedded in the version string"
+	| fields |
+
+	fields := self version splitOn: Character space.
+	self assert: fields first = 'Generation'.
+	self assert: fields third = 'NixOS'.
+	^ fields second asNumber.
+]
+
+{ #category : #accessing }
 NixOsBootEntry >> gtSummaryFor: aView [
 	<gtView>
 
